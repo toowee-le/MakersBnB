@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './lib/listing'
 
 class MakersBnB < Sinatra::Base
  get '/' do
@@ -9,7 +10,7 @@ class MakersBnB < Sinatra::Base
 
 get '/spaces' do
 
-    @list_of_spaces = ["The Turtle Suite"]
+    @list_of_spaces = Listing.get_listings
 
 erb :listings
 end
