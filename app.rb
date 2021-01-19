@@ -7,8 +7,16 @@ class MakersBnB < Sinatra::Base
         erb :index
       end
 
-    get 'signup' do
+    get '/signup' do
         erb :signup
+    end
+
+    get '/login' do
+        erb :login
+    end
+
+    get '/listings' do
+        erb :listings
     end
     
     get '/spaces' do
