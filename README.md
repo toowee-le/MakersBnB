@@ -49,6 +49,21 @@ I shouldn't be able to request a booking that's unavailable
 
 ### Set up the project locally
 Clone this repository and install all the gems/dependencies by running:
+
 ```
 bundle install
 ```
+
+Set up the databases by connecting to psql:
+
+```
+psql
+```
+
+Create the `MakersBnB` database:
+
+```
+CREATE DATABASE MakersBnB;
+```
+
+To create the tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
