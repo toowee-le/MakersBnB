@@ -13,7 +13,8 @@ feature 'viewing listing' do
     scenario 'user can see multiple lisings on MakersBnB' do
         visit '/Spaces' 
 
-        expect(page).to have_content("the turtle suite")
+        expect(page).to have_content("The Turtle Suite")
+        
     end
 end
 
