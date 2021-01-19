@@ -60,10 +60,11 @@ Set up the databases by connecting to psql:
 psql
 ```
 
-Create the `MakersBnB` database:
+Create the `MakersBnB` (development) and `MakersBnB_test` (testing) databases:
 
 ```
 CREATE DATABASE "MakersBnB";
+CREATE DATABASE "MakersBnB_test"
 ```
 
 To create the tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
