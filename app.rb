@@ -6,8 +6,8 @@ require 'erb'
 class MakersBnB < Sinatra::Base
     
     get '/' do
-        erb :index
-      end
+      erb :index
+    end
 
     get '/signup' do
         erb :signup
@@ -19,7 +19,7 @@ class MakersBnB < Sinatra::Base
 
     get '/listings' do
       @list_of_spaces = Listing.get_listings
-        erb :listings
+      erb :listings
     end
     
     run! if app_file == $0
