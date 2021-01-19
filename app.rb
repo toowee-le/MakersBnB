@@ -1,4 +1,6 @@
 require 'sinatra/base'
+require './lib/listing'
+
 require 'erb'
 
 class MakersBnB < Sinatra::Base
@@ -16,11 +18,8 @@ class MakersBnB < Sinatra::Base
     end
 
     get '/listings' do
+      @list_of_spaces = Listing.get_listings
         erb :listings
-    end
-    
-    get '/spaces' do
-        "Hello Spaces!"
     end
     
     run! if app_file == $0
