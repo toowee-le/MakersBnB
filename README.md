@@ -63,7 +63,7 @@ psql
 Create the `MakersBnB` database:
 
 ```
-CREATE DATABASE MakersBnB;
+CREATE DATABASE "MakersBnB";
 ```
 
 To create the tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
