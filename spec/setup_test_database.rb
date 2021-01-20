@@ -4,5 +4,5 @@ p "Setting up test database..."
 
 connection = PG.connect(dbname: 'MakersBnB_Test')
 
-# Clear the bookmarks table
+# Clear the listings table
 connection.exec("TRUNCATE listings;")
