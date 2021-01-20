@@ -13,7 +13,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="http://localhost:4567">Home</a>
+        <a class="nav-link" href="/">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
@@ -30,7 +30,8 @@
 
 <ul>
   <% @list_of_spaces.each do |space| %>
-    <li><%= space %></li>
+    <li><%= space[:name] %> <%= space[:description] %> <%= space[:price] %></li>
+   
   <% end %>
 </ul>
   
