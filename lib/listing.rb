@@ -9,7 +9,8 @@ class Listing
     end
 
     result = connection.exec("SELECT * FROM listings;" )
-    result.map do |hash| { name: hash['name'], description: hash['description'], price: hash['price'] }
+    result.map do |list|
+      { name: list["name"], price: list["price"], available_from: list["available_from"], available_to: list["available_to"], description: list["description"]}
     end
   end
 end
