@@ -15,8 +15,12 @@ class MakersBnB < Sinatra::Base
     end
 
     get '/add_listings' do
-        erb :add_listings
-        redirect '/listings'
+        erb :add_listings    
+    end
+
+    post '/listings' do
+        p params['name']
+        redirect '/listings'  
     end
     
   run! if app_file == $0
