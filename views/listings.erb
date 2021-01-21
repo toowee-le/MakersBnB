@@ -16,23 +16,29 @@
         <a class="nav-link" href="http://localhost:4567">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="http://localhost:4567/add_listings">Add Listings</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Listings</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://localhost:4567/login">Login</a>
+        <a class="nav-link" href="http://localhost:4567/listings">Listings</a>
       </li>
     </ul>
   </div>
 </nav>
 
-  <ul>
+<div class="container center_div w-50 p-3" style="background-color: #eee;">
+  <ul class="list-group list-group-flush">
   <% @list_of_spaces.each do |space| %>
-    <li><%= space %></li>
+    <li class="list-group-item"><%= space %></li>
   <% end %>
 </ul> 
+</div>
   
   
 </body>
+
+<footer class="bg-light text-center text-lg-start">
+  <div class="text-center p-3" style="background-color: white">
+    © 2020 Copyright:
+    <a class="text-dark" href="http://localhost:4567/">Makers BnB</a>
+  </div>
+</footer>

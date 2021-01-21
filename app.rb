@@ -9,17 +9,14 @@ class MakersBnB < Sinatra::Base
         erb :index
       end
 
-    get '/signup' do
-        erb :signup
-    end
-
-    get '/login' do
-        erb :login
-    end
-
     get '/listings' do
-      @list_of_spaces = Listing.get_listings
+        @list_of_spaces = Listing.get_listings
         erb :listings
+    end
+
+    get '/add_listings' do
+        erb :add_listings
+        redirect '/listings'
     end
     
     run! if app_file == $0
