@@ -13,7 +13,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="http://localhost:4567">Home</a>
+        <a class="nav-link" href="/">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://localhost:4567/add_listings">Add Listings</a>
@@ -28,10 +28,11 @@
 <div class="container center_div w-50 p-3" style="background-color: #eee;">
   <ul class="list-group list-group-flush">
   <% @list_of_spaces.each do |space| %>
-    <li class="list-group-item"><%= space %></li>
+    <li class="list-group-item"><%= space[:name] %> <%= space[:description] %> <%= space[:price] %> <%= space[:available_from] %> <%= space[:available_to] %></li>
   <% end %>
 </ul> 
 </div>
+
   
   
 </body>
