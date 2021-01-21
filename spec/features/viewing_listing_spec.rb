@@ -14,7 +14,7 @@ feature 'viewing listing' do
     visit('/')
     click_link('Listings')
 
-    byebug
+    # byebug
 
     expect(page).to have_content('The Turtle Suite', 'the dreamiest beachfront view', 250 )
     expect(page).to have_content('The Garden Suite', 'beutiful ensuite with forest views in paradise', 300 )
