@@ -3,9 +3,7 @@ feature 'view homepage' do
     visit ('/') 
 
     expect(page).to have_link("Home")
-    expect(page).to have_link("About")
+    expect(page).to have_link("Add Listings")
     expect(page).to have_link("Listings")
-    expect(page).to have_link("Login")
-
   end
 end
