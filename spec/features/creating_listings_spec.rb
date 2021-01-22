@@ -10,7 +10,7 @@ feature 'Adding a new listing' do
       fill_in('available_to', with: '2020-05-01')
       fill_in('price', with: '250')
       click_button('List my space!')
-      save_and_open_page
+
       expect(page).to have_content('The Turtle Suite')
       expect(page).to have_content('the dreamiest beachfront views')
       expect(page).to have_content('250')
