@@ -6,6 +6,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <img src="https://webstockreview.net/images/clipart-house-logo-1.png" width="30" height="30" class="d-inline-block align-top" alt="">
   <a class="navbar-brand" href="/">Makers BnB</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -30,28 +31,32 @@
     style="
       background-image: url('https://st3.idealista.com/cms/archivos/2019-10/media/image/705800504.jpg?fv=pvYRug0x');
       background-size: cover;
-      height: 685px;
+      height: 800px;
     "
   >
 
 <br>
 
-<div class="container center_div w-50 p-3" style="background-color: #eee;">
+<h2 class="text-white"> Listings </h2>
+<br>
+
+<div class="container center_div w-75 p-3" style="background-color: #eee;">
   <ul class="list-group list-group-flush">
   <% @list_of_spaces.each do |space| %>
-    <li class="list-group-item"><%= space[:name] %> <%= space[:description] %> <%= space[:price] %> <%= space[:available_from] %> <%= space[:available_to] %></li>
+    <li class="list-group-item"><b>Name: </b><%= space[:name] %> <b>Price(£): </b><%= space[:price] %> <b>From: </b><%= space[:available_from] %> <b>To: </b><%= space[:available_to] %> <b>Review: </b> <%= space[:description] %></li>
   <% end %>
 </ul> 
 </div>
 
-  <footer class="bg-light text-center text-lg-start"> 
+</body>
+
+ <!-- > <footer class="bg-light text-center text-lg-start"> 
   <div class="text-center p-3" style="background-color: white">
     © 2020 Copyright:
     <a class="text-dark" href="/">Makers BnB</a>
   </div>
-</footer> 
-  
-</body>
+</footer> --!>
+
 
 
 
